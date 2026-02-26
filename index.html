@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salut ERP</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js"></script>
+    <script>
+      async function initBarcodeDetector() {
+        var barcodeDetectorUsable = false;
+        if ("BarcodeDetector" in window) {
+          let formats = await window.BarcodeDetector.getSupportedFormats();
+          if (formats.length > 0) {
+            barcodeDetectorUsable = true;
+          }
+        }
+        if (barcodeDetectorUsable !== true) {
+          BarcodeDetectorPolyfill.setLicense(
+            "DLS2eyJoYW5kc2hha2VDb2RlIjoiMTA0NzA3MzMyLU1UQTBOekEzTXpNeUxYZGxZaTFVY21saGJGQnliMm8iLCJtYWluU2VydmVyVVJMIjoiaHR0cHM6Ly9tZGxzLmR5bmFtc29mdG9ubGluZS5jb20iLCJvcmdhbml6YXRpb25JRCI6IjEwNDcwNzMzMiIsInN0YW5kYnlTZXJ2ZXJVUkwiOiJodHRwczovL3NkbHMuZHluYW1zb2Z0b25saW5lLmNvbSIsImNoZWNrQ29kZSI6LTk1NzIxMjkzMX0="
+          );
+          await BarcodeDetectorPolyfill.init();
+          window.BarcodeDetector = BarcodeDetectorPolyfill;
+        }
+      }
+      window.initBarcodeDetector = initBarcodeDetector;
+    </script>
+    <script type="module" crossorigin src="/assets/index-BBOPAqxm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BwPkHMkh.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
