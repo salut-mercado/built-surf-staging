@@ -33,28 +33,8 @@
         }
       })(window.location);
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js"></script>
-    <script>
-      async function initBarcodeDetector() {
-        var barcodeDetectorUsable = false;
-        if ("BarcodeDetector" in window) {
-          let formats = await window.BarcodeDetector.getSupportedFormats();
-          if (formats.length > 0) {
-            barcodeDetectorUsable = true;
-          }
-        }
-        if (barcodeDetectorUsable !== true) {
-          BarcodeDetectorPolyfill.setLicense(
-            "DLS2eyJoYW5kc2hha2VDb2RlIjoiMTA0NzA3MzMyLU1UQTBOekEzTXpNeUxYZGxZaTFVY21saGJGQnliMm8iLCJtYWluU2VydmVyVVJMIjoiaHR0cHM6Ly9tZGxzLmR5bmFtc29mdG9ubGluZS5jb20iLCJvcmdhbml6YXRpb25JRCI6IjEwNDcwNzMzMiIsInN0YW5kYnlTZXJ2ZXJVUkwiOiJodHRwczovL3NkbHMuZHluYW1zb2Z0b25saW5lLmNvbSIsImNoZWNrQ29kZSI6LTk1NzIxMjkzMX0="
-          );
-          await BarcodeDetectorPolyfill.init();
-          window.BarcodeDetector = BarcodeDetectorPolyfill;
-        }
-      }
-      window.initBarcodeDetector = initBarcodeDetector;
-    </script>
-    <script type="module" crossorigin src="/assets/index-ByVnODhO.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DabBavIY.css">
+    <script type="module" crossorigin src="/assets/index-D_0HfbfK.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DNPycmR6.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
   <body>
     <div id="root"></div>
