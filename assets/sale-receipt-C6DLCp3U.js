@@ -1,4 +1,4 @@
-import{g as R,o as C,p as L}from"./index-B6qatS0q.js";const A=`
+import{g as R,o as C,p as L}from"./index-gBGlJKAn.js";const A=`
   <header class="receipt__header">
     <div class="receipt__title">{{storeName}}</div>
     <div class="receipt__stack receipt__small">
