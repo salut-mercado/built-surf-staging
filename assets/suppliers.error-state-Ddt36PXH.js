@@ -1,0 +1,1 @@
+import{b as e,j as r,w as i,C as l,x as a,y as n}from"./index-DW_kH0ks.js";const c=({message:s})=>{const{t}=e();return r.jsxs(i,{variant:"destructive",children:[r.jsx(l,{}),r.jsx(a,{children:t("suppliers.errorState.title")}),r.jsx(n,{children:r.jsx("p",{children:s})})]})};export{c as S};
