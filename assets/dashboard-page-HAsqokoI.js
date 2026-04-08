@@ -1,1 +1,0 @@
-import{j as a,a as o}from"./index-Pm2admst.js";const n=({title:s,children:e,className:x,...l})=>a.jsxs("div",{className:o("flex flex-col px-4 lg:px-6 py-4",x),...l,children:[s&&a.jsx("span",{className:"text-lg font-bold mb-2",children:s}),e]});export{n as D};
