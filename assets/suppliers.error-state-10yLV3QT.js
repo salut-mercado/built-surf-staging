@@ -1,0 +1,1 @@
+import{b as e,j as r,m as i,C as l,n as a,o as n}from"./index-Pm2admst.js";const c=({message:s})=>{const{t}=e();return r.jsxs(i,{variant:"destructive",children:[r.jsx(l,{}),r.jsx(a,{children:t("suppliers.errorState.title")}),r.jsx(n,{children:r.jsx("p",{children:s})})]})};export{c as S};
