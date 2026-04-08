@@ -1,0 +1,1 @@
+import{c2 as r}from"./index-jCRNrujL.js";function n(m,t="EUR",i){return new Intl.NumberFormat(r.language,{style:"currency",currency:t,minimumFractionDigits:i?.minimumFractionDigits??2,maximumFractionDigits:i?.maximumFractionDigits??2}).format(m)}export{n as f};
