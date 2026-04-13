@@ -1,0 +1,1 @@
+const o="3600";function n(a){const e=new FormData;return e.append("cacheControl",o),e.append("",a),e}function t(a,e){return fetch(a,{method:"PUT",headers:{"x-upsert":"false"},body:n(e)})}export{t as u};
