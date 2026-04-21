@@ -1,1 +1,0 @@
-import{b as s,j as r,n as a,C as n,o as i,p as l}from"./index-NudQMcoR.js";const o=({message:t})=>{const{t:e}=s();return r.jsxs(a,{variant:"destructive",children:[r.jsx(n,{}),r.jsx(i,{children:e("manufacturers.errorState.title")}),r.jsx(l,{children:r.jsx("p",{children:t})})]})};export{o as M};
