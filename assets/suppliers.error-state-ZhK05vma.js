@@ -1,0 +1,1 @@
+import{b as e,j as r,n as i,C as l,o as a,p as n}from"./index-ajM4Epr5.js";const p=({message:s})=>{const{t}=e();return r.jsxs(i,{variant:"destructive",children:[r.jsx(l,{}),r.jsx(a,{children:t("suppliers.errorState.title")}),r.jsx(n,{children:r.jsx("p",{children:s})})]})};export{p as S};
