@@ -1,0 +1,1 @@
+function o(t,d){const i=new Map(d.map(e=>[e.id,e])),n=[t.category_name],r=new Set([t.id]);let a=t.parent_category_id;for(;a;){const e=i.get(a);if(!e||r.has(e.id))break;r.add(e.id),n.unshift(e.category_name),a=e.parent_category_id}return n.join(" > ")}export{o as g};
