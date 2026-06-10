@@ -1,0 +1,1 @@
+import{cF as r,bQ as t}from"./index-D8lOY-6C.js";function c(p,e={}){return r(p,{paperWidth:e.paperWidth??t.getState().receiptWidth,receiptFont:e.receiptFont??t.getState().receiptOptions.receiptFont??"spleen",scale:e.scale??t.getState().receiptOptions.receiptScale??1.4})}export{c as s};
