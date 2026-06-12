@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Open Source Licenses — Salut</title>
+    <style>
+      :root {
+        --bg: #fafafa;
+        --fg: #1a1a2e;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --accent: #6d28d9;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: Outfit, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+        color: var(--fg);
+        background: var(--bg);
+        padding: 24px 16px 64px;
+      }
+
+      main { max-width: 760px; margin: 0 auto; }
+      header { margin-bottom: 40px; }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+      }
+
+      .subtitle { font-size: 15px; color: var(--muted); line-height: 1.5; }
+
+      section { margin-bottom: 32px; }
+
+      h2 {
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 6px 16px;
+      }
+
+      li a {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 4px;
+        font-size: 14px;
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+
+      li a:hover { color: #4c1d95; text-decoration: underline; }
+
+      li a::before {
+        content: "↗";
+        font-size: 10px;
+        opacity: 0.5;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      footer {
+        margin-top: 48px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      footer a { color: var(--accent); text-decoration: none; }
+      footer a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Open Source Licenses</h1>
+        <p class="subtitle">
+          Salut is built on open source software. Below is a list of the third-party
+          libraries we use, grouped by category, with links to their license information.
+        </p>
+      </header>
+
+      <section>
+        <h2>User Interface</h2>
+        <ul>
+          <li><a href="https://github.com/facebook/react/blob/main/LICENSE" rel="noopener">React</a></li>
+          <li><a href="https://github.com/ReactTraining/react-router/blob/main/LICENSE" rel="noopener">React Router</a></li>
+          <li><a href="https://github.com/radix-ui/primitives/blob/main/LICENSE" rel="noopener">Radix UI</a></li>
+          <li><a href="https://github.com/lucide-icons/lucide/blob/main/LICENSE" rel="noopener">Lucide Icons</a></li>
+          <li><a href="https://github.com/tabler/tabler-icons/blob/master/LICENSE" rel="noopener">Tabler Icons</a></li>
+          <li><a href="https://github.com/emilkowalski/sonner/blob/main/LICENSE" rel="noopener">Sonner</a></li>
+          <li><a href="https://github.com/emilkowalski/vaul/blob/main/LICENSE" rel="noopener">Vaul</a></li>
+          <li><a href="https://github.com/pacocoursey/cmdk/blob/main/LICENSE" rel="noopener">cmdk</a></li>
+          <li><a href="https://github.com/guilhermerodz/input-otp/blob/main/LICENSE" rel="noopener">Input OTP</a></li>
+          <li><a href="https://github.com/gpbl/react-day-picker/blob/main/LICENSE" rel="noopener">React Day Picker</a></li>
+          <li><a href="https://github.com/juliencrn/usehooks-ts/blob/main/LICENSE" rel="noopener">usehooks-ts</a></li>
+          <li><a href="https://www.npmjs.com/package/html2canvas-pro" rel="noopener">html2canvas Pro</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Styling</h2>
+        <ul>
+          <li><a href="https://github.com/tailwindlabs/tailwindcss/blob/main/LICENSE" rel="noopener">Tailwind CSS</a></li>
+          <li><a href="https://github.com/joe-bell/cva/blob/main/LICENSE" rel="noopener">Class Variance Authority</a></li>
+          <li><a href="https://github.com/dcastil/tailwind-merge/blob/main/LICENSE" rel="noopener">tailwind-merge</a></li>
+          <li><a href="https://github.com/lukeed/clsx/blob/master/license" rel="noopener">clsx</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Data &amp; State</h2>
+        <ul>
+          <li><a href="https://github.com/TanStack/query/blob/main/LICENSE" rel="noopener">TanStack Query</a></li>
+          <li><a href="https://github.com/TanStack/table/blob/main/LICENSE" rel="noopener">TanStack Table</a></li>
+          <li><a href="https://github.com/TanStack/virtual/blob/main/LICENSE" rel="noopener">TanStack Virtual</a></li>
+          <li><a href="https://github.com/TanStack/form/blob/main/LICENSE" rel="noopener">TanStack Form</a></li>
+          <li><a href="https://github.com/TanStack/hotkeys/blob/main/LICENSE" rel="noopener">TanStack Hotkeys</a></li>
+          <li><a href="https://github.com/pmndrs/zustand/blob/main/LICENSE" rel="noopener">Zustand</a></li>
+          <li><a href="https://github.com/colinhacks/zod/blob/main/LICENSE" rel="noopener">Zod</a></li>
+          <li><a href="https://github.com/MikeMcl/decimal.js/blob/master/LICENCE.md" rel="noopener">decimal.js</a></li>
+          <li><a href="https://github.com/jakearchibald/idb-keyval/blob/main/LICENSE" rel="noopener">idb-keyval</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Networking</h2>
+        <ul>
+          <li><a href="https://github.com/axios/axios/blob/main/LICENSE" rel="noopener">Axios</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Internationalization</h2>
+        <ul>
+          <li><a href="https://github.com/i18next/i18next/blob/master/LICENSE" rel="noopener">i18next</a></li>
+          <li><a href="https://github.com/i18next/react-i18next/blob/master/LICENSE" rel="noopener">react-i18next</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Charts &amp; Visualization</h2>
+        <ul>
+          <li><a href="https://github.com/recharts/recharts/blob/master/LICENSE" rel="noopener">Recharts</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Text &amp; Content</h2>
+        <ul>
+          <li><a href="https://github.com/remarkjs/react-markdown/blob/main/license" rel="noopener">React Markdown</a></li>
+          <li><a href="https://github.com/ueberdosis/tiptap/blob/main/LICENSE" rel="noopener">Tiptap</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Barcodes &amp; Labeling</h2>
+        <ul>
+          <li><a href="https://github.com/lindell/JsBarcode/blob/master/LICENSE" rel="noopener">JsBarcode</a></li>
+          <li><a href="https://www.npmjs.com/package/barcode-detector" rel="noopener">Barcode Detector</a></li>
+          <li><a href="https://www.npmjs.com/package/qrcode-generator" rel="noopener">QR Code Generator</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Date &amp; Time</h2>
+        <ul>
+          <li><a href="https://github.com/date-fns/date-fns/blob/main/LICENSE" rel="noopener">date-fns</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Hardware</h2>
+        <ul>
+          <li><a href="https://github.com/node-usb/node-usb-rs/blob/main/LICENSE" rel="noopener">node-usb</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Desktop</h2>
+        <ul>
+          <li><a href="https://github.com/electron/electron/blob/main/LICENSE" rel="noopener">Electron</a></li>
+          <li><a href="https://github.com/electron-userland/electron-builder/blob/main/LICENSE" rel="noopener">Electron Builder</a></li>
+          <li><a href="https://github.com/electron-userland/electron-builder/blob/main/LICENSE" rel="noopener">Electron Updater</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Build &amp; Tooling</h2>
+        <ul>
+          <li><a href="https://github.com/vitejs/vite/blob/main/LICENSE" rel="noopener">Vite</a></li>
+          <li><a href="https://github.com/vite-pwa/vite-plugin-pwa/blob/main/LICENSE" rel="noopener">Vite Plugin PWA</a></li>
+          <li><a href="https://github.com/pd4d10/vite-plugin-svgr/blob/main/LICENSE" rel="noopener">Vite Plugin SVGR</a></li>
+          <li><a href="https://github.com/GoogleChrome/workbox/blob/main/LICENSE" rel="noopener">Workbox</a></li>
+          <li><a href="https://github.com/microsoft/TypeScript/blob/main/LICENSE" rel="noopener">TypeScript</a></li>
+          <li><a href="https://github.com/vitest-dev/vitest/blob/main/LICENSE" rel="noopener">Vitest</a></li>
+          <li><a href="https://github.com/eslint/eslint/blob/main/LICENSE" rel="noopener">ESLint</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Backend Services</h2>
+        <ul>
+          <li><a href="https://github.com/fastapi/fastapi/blob/main/LICENSE" rel="noopener">FastAPI</a></li>
+          <li><a href="https://github.com/sqlalchemy/sqlalchemy/blob/main/LICENSE" rel="noopener">SQLAlchemy</a></li>
+          <li><a href="https://github.com/sqlalchemy/alembic/blob/main/LICENSE" rel="noopener">Alembic</a></li>
+          <li><a href="https://github.com/MagicStack/asyncpg/blob/master/LICENSE" rel="noopener">asyncpg</a></li>
+          <li><a href="https://github.com/psycopg/psycopg/blob/master/LICENSE" rel="noopener">psycopg</a></li>
+          <li><a href="https://github.com/python-websockets/websockets/blob/main/LICENSE" rel="noopener">websockets</a></li>
+          <li><a href="https://github.com/agronholm/anyio/blob/main/LICENSE" rel="noopener">anyio</a></li>
+          <li><a href="https://github.com/JoshData/python-email-validator/blob/main/LICENSE" rel="noopener">email-validator</a></li>
+          <li><a href="https://github.com/daviddrysdale/python-phonenumbers/blob/master/LICENSE" rel="noopener">phonenumbers</a></li>
+          <li><a href="https://github.com/Tinche/aiofiles/blob/main/LICENSE" rel="noopener">aiofiles</a></li>
+          <li><a href="https://github.com/oittaa/uuid6-python/blob/main/LICENSE" rel="noopener">uuid6</a></li>
+          <li><a href="https://github.com/pandas-dev/pandas/blob/main/LICENSE" rel="noopener">pandas</a></li>
+          <li><a href="https://github.com/mpdavis/python-jose/blob/main/LICENSE" rel="noopener">python-jose</a></li>
+          <li><a href="https://github.com/workos/workos-python/blob/main/LICENSE" rel="noopener">WorkOS</a></li>
+          <li><a href="https://github.com/scalar/scalar/blob/main/LICENSE" rel="noopener">Scalar</a></li>
+          <li><a href="https://github.com/dwolfhub/zxcvbn-python/blob/master/LICENSE" rel="noopener">zxcvbn</a></li>
+          <li><a href="https://pypi.org/project/openpyxl/" rel="noopener">openpyxl</a></li>
+          <li><a href="https://github.com/python-pillow/Pillow/blob/main/LICENSE" rel="noopener">Pillow</a></li>
+          <li><a href="https://pypi.org/project/sqlalchemy-json/" rel="noopener">sqlalchemy-json</a></li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>
+          All listed libraries are used in accordance with their respective licenses.
+          License texts are distributed with the installed packages and available in
+          the linked repositories. Unless otherwise noted, the libraries above are
+          licensed under the
+          <a href="https://opensource.org/licenses/MIT" rel="noopener">MIT License</a>,
+          <a href="https://opensource.org/licenses/Apache-2.0" rel="noopener">Apache 2.0 License</a>, or
+          <a href="https://opensource.org/licenses/BSD-3-Clause" rel="noopener">BSD-3-Clause License</a>.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
