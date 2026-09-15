@@ -1,1 +1,0 @@
-import{j as a}from"./framework-9dWxOEpG.js";import{c as x}from"./index-CsASJNNK.js";const m=({title:s,children:o,className:r,...e})=>a.jsxs("div",{className:x("flex flex-col px-4 lg:px-6 py-4",r),...e,children:[s&&a.jsx("span",{className:"text-lg font-bold mb-2",children:s}),o]});export{m as D};
