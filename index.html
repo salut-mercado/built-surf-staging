@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta name="salut-version" content="1.31.1">
-    <meta name="salut-release" content="14d0bf39ff5c52bb13f6696a2d16838ae64e5f41">
+    <meta name="salut-release" content="136c4936a4e0bef357cbf586ff27454f99bd2c74">
 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo-icon.svg" />
@@ -12,6 +12,32 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>Salut ERP</title>
+    <script>
+      window.surfAnalyticsBeforeSend = function (_type, payload) {
+        return {
+          ...payload,
+          data: {
+            ...payload.data,
+            platform: window.salutDesktop ? "desktop" : "web",
+          },
+        };
+      };
+      const umamiWebsiteId =
+        {
+          "app.salutmercado.com": "fa567abf-2e4c-4a37-b041-d4a0fbbfe105",
+          "staging.salutmercado.com": "843a4b5d-7493-40f4-b5ee-0cb3b6666263",
+        }[window.location.hostname] ?? "6565b93b-009c-4db1-aae7-afc7e36b3123";
+      const umamiScript = document.createElement("script");
+      umamiScript.id = "surf-analytics";
+      umamiScript.defer = true;
+      umamiScript.src =
+        "https://umami-gsnkom2ou0brrwtnrxqwlxtr.salutmercado.com/script.js";
+      umamiScript.dataset.websiteId = umamiWebsiteId;
+      umamiScript.dataset.excludeSearch = "true";
+      umamiScript.dataset.excludeHash = "true";
+      umamiScript.dataset.beforeSend = "surfAnalyticsBeforeSend";
+      document.head.appendChild(umamiScript);
+    </script>
     <script>
       // Block pinch-to-zoom on touch devices (Chrome/Windows, iOS Safari).
       // Viewport meta alone is insufficient on many browsers.
@@ -51,7 +77,7 @@
         }
       })(window.location);
     </script>
-    <script type="module" crossorigin src="/assets/index-BNWwwxIx.js"></script>
+    <script type="module" crossorigin src="/assets/index-y-90-p0Z.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/framework-9dWxOEpG.js">
     <link rel="modulepreload" crossorigin href="/assets/api-client-Ft8AO9an.js">
     <link rel="stylesheet" crossorigin href="/assets/index-B3shlsnq.css">
