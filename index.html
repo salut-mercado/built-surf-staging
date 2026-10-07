@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta name="salut-version" content="1.32.0">
-    <meta name="salut-release" content="5b08ae7a1aecf8d3c0168241219e65524705f73b">
+    <meta name="salut-release" content="0f79af4486c43a1067d0bf6e6806e6ab1f6992d5">
 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo-icon.svg" />
@@ -41,9 +41,10 @@
       })(window.location);
     </script>
     <script data-appearance-bootstrap>
-      // Applies the saved theme, palette, and density before first paint.
-      // Mirrors createUseTheme and getBrowserDensity in @salut/ui and the
-      // storage keys in src/lib/theme.ts; theme-bootstrap.test.tsx checks parity.
+      // Applies the saved theme, palette, corner radius, and density before
+      // first paint. Mirrors createUseTheme and getBrowserDensity in @salut/ui
+      // and the storage keys in src/lib/theme.ts; theme-bootstrap.test.tsx
+      // checks parity.
       (function () {
         var root = document.documentElement;
         var media = function (query) {
@@ -56,7 +57,18 @@
             return null;
           }
         };
-        var palette = read("vite-ui-palette");
+        var palettes = ["default", "easy", "olive", "harbor"];
+        var legacyPalette = read("vite-ui-palette");
+        // Light and dark each keep a palette; the single palette saved
+        // before that seeds both.
+        var paletteFor = function (scheme) {
+          var saved = read("vite-ui-palette-" + scheme);
+          if (palettes.indexOf(saved) === -1) saved = legacyPalette;
+          return palettes.indexOf(saved) === -1 ? "default" : saved;
+        };
+        var applyPalette = function (palette) {
+          if (palette !== "default") root.classList.add("palette-" + palette);
+        };
         if (window.location.pathname.indexOf("/customer-display") !== -1) {
           // The customer display is always light; mirrors the palette rule in
           // customer-display.page.tsx.
@@ -67,18 +79,21 @@
               displayTheme;
           } catch (error) {}
           root.classList.add("light");
-          if (
-            displayTheme === "orange" ||
-            (displayTheme === "system" && palette === "easy")
-          )
-            root.classList.add("palette-easy");
+          if (displayTheme === "orange") applyPalette("easy");
+          else if (displayTheme === "system") applyPalette(paletteFor("light"));
         } else {
           var theme = read("ui-theme");
           if (theme !== "light" && theme !== "dark") {
             theme = media("(prefers-color-scheme: dark)") ? "dark" : "light";
           }
           root.classList.add(theme);
-          if (palette === "easy") root.classList.add("palette-easy");
+          applyPalette(paletteFor(theme));
+        }
+        var radiusScale = read("ui-radius-scale");
+        if (radiusScale !== null && radiusScale.trim() !== "") {
+          radiusScale = Number(radiusScale);
+          if (radiusScale >= 0 && radiusScale <= 2 && radiusScale !== 1)
+            root.style.setProperty("--radius-scale", String(radiusScale));
         }
         var density = read("ui-density");
         if (density !== "normal" && density !== "touch") {
@@ -130,7 +145,7 @@
         { passive: false }
       );
     </script>
-    <script type="module" crossorigin src="/assets/index-CoDJfexG.js"></script>
+    <script type="module" crossorigin src="/assets/index-CfmCBwsE.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-hePW80VL.js">
     <link rel="modulepreload" crossorigin href="/assets/framework-48MSbXsU.js">
     <link rel="modulepreload" crossorigin href="/assets/middleware-BlUDYAwf.js">
@@ -138,20 +153,20 @@
     <link rel="modulepreload" crossorigin href="/assets/server-query-C77bkYsf.js">
     <link rel="modulepreload" crossorigin href="/assets/cn-24QbgdAa.js">
     <link rel="modulepreload" crossorigin href="/assets/badge-CNsAVWiH.js">
-    <link rel="modulepreload" crossorigin href="/assets/i18n-resources-Di40uRbt.js">
-    <link rel="modulepreload" crossorigin href="/assets/format-price-BA2zQw1s.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-resources-CFj_N6Rf.js">
+    <link rel="modulepreload" crossorigin href="/assets/format-price-WORJozJT.js">
     <link rel="modulepreload" crossorigin href="/assets/dist-B1CeWyKv.js">
     <link rel="modulepreload" crossorigin href="/assets/createLucideIcon-CV58rsfa.js">
     <link rel="modulepreload" crossorigin href="/assets/app-shell-BNES3tiJ.js">
     <link rel="modulepreload" crossorigin href="/assets/dist-DtrWIDHm.js">
     <link rel="modulepreload" crossorigin href="/assets/popover-BW4bUH8W.js">
-    <link rel="modulepreload" crossorigin href="/assets/global.store-DLoKnBEt.js">
+    <link rel="modulepreload" crossorigin href="/assets/global.store-9DjcAg4H.js">
     <link rel="modulepreload" crossorigin href="/assets/label-BjBm7CbB.js">
     <link rel="modulepreload" crossorigin href="/assets/x-GaCy1H3q.js">
     <link rel="modulepreload" crossorigin href="/assets/dist-BkfsKPTL.js">
     <link rel="modulepreload" crossorigin href="/assets/native-bridge-BBVNIhnm.js">
     <link rel="modulepreload" crossorigin href="/assets/decimal-BqzAOtAh.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-BugokJk9.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-hCgvx4Lj.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
   <body>
     <div id="root"></div>
