@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta name="salut-version" content="1.32.0">
-    <meta name="salut-release" content="26e069c7e41033e170bc1489af827b21a134d4eb">
+    <meta name="salut-release" content="6a11aa7f338602ded96e3edc4ea015c28472e15a">
 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo-icon.svg" />
@@ -11,6 +11,87 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <!-- Restore the GitHub Pages 404 redirect before the bootstrap reads location. -->
+    <script type="text/javascript" data-spa-redirect>
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+    <script data-appearance-bootstrap>
+      // Applies the saved theme, palette, and density before first paint.
+      // Mirrors createUseTheme and getBrowserDensity in @salut/ui and the
+      // storage keys in src/lib/theme.ts; theme-bootstrap.test.tsx checks parity.
+      (function () {
+        var root = document.documentElement;
+        var media = function (query) {
+          return Boolean(window.matchMedia && window.matchMedia(query).matches);
+        };
+        var read = function (key) {
+          try {
+            return window.localStorage.getItem(key);
+          } catch (error) {
+            return null;
+          }
+        };
+        var palette = read("vite-ui-palette");
+        if (window.location.pathname.indexOf("/customer-display") !== -1) {
+          // The customer display is always light; mirrors the palette rule in
+          // customer-display.page.tsx.
+          var displayTheme = "system";
+          try {
+            displayTheme =
+              JSON.parse(read("global-store")).state.customerDisplayTheme ||
+              displayTheme;
+          } catch (error) {}
+          root.classList.add("light");
+          if (
+            displayTheme === "orange" ||
+            (displayTheme === "system" && palette === "easy")
+          )
+            root.classList.add("palette-easy");
+        } else {
+          var theme = read("ui-theme");
+          if (theme !== "light" && theme !== "dark") {
+            theme = media("(prefers-color-scheme: dark)") ? "dark" : "light";
+          }
+          root.classList.add(theme);
+          if (palette === "easy") root.classList.add("palette-easy");
+        }
+        var density = read("ui-density");
+        if (density !== "normal" && density !== "touch") {
+          density =
+            window.salutDesktop ||
+            window.navigator.maxTouchPoints > 0 ||
+            media("(max-width: 767px), (pointer: coarse)")
+              ? "touch"
+              : "normal";
+        }
+        root.dataset.density = density;
+      })();
+    </script>
     <title>Salut ERP</title>
     <script>
       window.surfAnalyticsBeforeSend = function (_type, payload) {
@@ -49,38 +130,10 @@
         { passive: false }
       );
     </script>
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
-    </script>
-    <script type="module" crossorigin src="/assets/index-GekyioSH.js"></script>
+    <script type="module" crossorigin src="/assets/index-DkeMng62.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/framework-9dWxOEpG.js">
     <link rel="modulepreload" crossorigin href="/assets/api-client-CbO2fgSU.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-BSqNSU_A.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-XoJWEWHM.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
   <body>
     <div id="root"></div>
