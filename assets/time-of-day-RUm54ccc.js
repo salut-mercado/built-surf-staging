@@ -1,0 +1,1 @@
+var e=e=>{if(!e)return null;let[t,n]=e.split(`:`).map(Number);return Number.isNaN(t)||Number.isNaN(n)||t<0||t>23||n<0||n>59?null:t*60+n};export{e as t};

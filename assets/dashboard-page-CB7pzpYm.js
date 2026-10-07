@@ -1,0 +1,1 @@
+import{o as e}from"./framework-48MSbXsU.js";import{t}from"./cn-24QbgdAa.js";var n=e(),r=({title:e,children:r,className:i,...a})=>(0,n.jsxs)(`div`,{className:t(`flex flex-col px-4 lg:px-6 py-4`,i),...a,children:[e&&(0,n.jsx)(`span`,{className:`text-lg font-bold mb-2`,children:e}),r]});export{r as t};

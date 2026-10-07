@@ -1,0 +1,1 @@
+function e(e){let t=new FormData;return t.append(`cacheControl`,`3600`),t.append(``,e),t}function t(t,n,r){return fetch(t,{method:`PUT`,headers:{"x-upsert":String(r?.upsert??!1)},body:e(n)})}export{t};

@@ -1,0 +1,1 @@
+var e={kind:`web`,isDesktop:!1,isWeb:!0},t={kind:`desktop`,isDesktop:!0,isWeb:!1};function n(){if(typeof window<`u`)return window.salutDesktop}function r(){n()?.flushDesktopStorage?.()}function i(){return n()?t:e}export{i as n,n as r,r as t};
