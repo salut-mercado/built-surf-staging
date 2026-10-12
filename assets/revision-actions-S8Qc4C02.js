@@ -1,1 +1,0 @@
-import{or as e}from"./index-boeusJN_.js";async function t({storeId:t,hasCurrentDraft:n,startRevision:r,navigate:i}){if(t){if(n){i(e.stores.inventoryRevision(t));return}try{await r.mutateAsync({storeId:t}),i(e.stores.inventoryRevision(t))}catch{}}}export{t};
