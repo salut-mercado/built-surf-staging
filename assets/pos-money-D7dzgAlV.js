@@ -1,0 +1,1 @@
+import{t as e}from"./decimal-BqzAOtAh.js";function t(t){return new e(t)}function n(e){return t(e).toNumber()}function r(e,n){return t(e).plus(n)}function i(e,n){return t(e).minus(n)}function a(e,n){return t(e).times(n)}function o(e,n){return t(e).div(n)}function s(t,n){return e.max(t,n)}export{a,s as i,r as n,n as o,o as r,i as s,t};
