@@ -1,0 +1,1 @@
+var e=[`mon`,`tue`,`wed`,`thu`,`fri`,`sat`,`sun`],t=Object.fromEntries(e.map(e=>[e,{closed:!1,ranges:[{open:`09:00`,close:`18:00`}]}]));function n(n){return Object.fromEntries(e.map(e=>{let r=n?.[e];return r?[e,{closed:r.closed??!1,ranges:r.ranges??[]}]:[e,t[e]]}))}export{t as n,n as r,e as t};

@@ -1,1 +1,0 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{x as t}from"./framework-48MSbXsU.js";var n=e(t(),1),r=globalThis?.document?n.useLayoutEffect:()=>{};function i(e){let t=n.useRef(e);return n.useEffect(()=>{t.current=e}),n.useMemo(()=>(...e)=>t.current?.(...e),[])}export{r as n,i as t};
