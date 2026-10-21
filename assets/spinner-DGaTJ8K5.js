@@ -1,1 +1,0 @@
-import{o as e}from"./framework-48MSbXsU.js";import{t}from"./cn-DWAEIzZp.js";import{n}from"./badge-Xb21fEim.js";var r=n(`loader-circle`,[[`path`,{d:`M21 12a9 9 0 1 1-6.219-8.56`,key:`13zald`}]]),i=e();function a({className:e,...n}){return(0,i.jsx)(r,{role:`status`,"aria-label":`Loading`,className:t(`size-4 animate-spin`,e),...n})}export{a as t};
