@@ -1,0 +1,1 @@
+import{At as e,Nt as t,kt as n,l as r}from"./use-collection-query-BYC6ulSI.js";var i=e({name:`posTerminals`,fetch:(e,n)=>r.stores.listStorePosTerminalsHandlerApiStoresStoreIdPosTerminalsGet({storeId:e.storeId},t(e,n)).then(e=>e.data),itemId:e=>e.id,pullEvery:n,startup:`always`,tenantScoped:!0,userScoped:!1,storeScoped:!0});export{i as t};
