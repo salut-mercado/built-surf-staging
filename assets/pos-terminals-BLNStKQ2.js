@@ -1,1 +1,0 @@
-import{Gt as e,Kt as t,Yt as n,l as r}from"./use-collection-query-CnceJCRu.js";var i=t({name:`posTerminals`,fetch:(e,t)=>r.stores.listStorePosTerminalsHandlerApiStoresStoreIdPosTerminalsGet({storeId:e.storeId},n(e,t)).then(e=>e.data),itemId:e=>e.id,pullEvery:e,startup:`always`,tenantScoped:!0,userScoped:!1,storeScoped:!0});export{i as t};
