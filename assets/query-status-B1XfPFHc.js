@@ -1,0 +1,1 @@
+function e(e){return{isLoading:e.some(e=>e.isPending),isError:e.some(e=>e.isError),errorMessage:e.find(e=>e.error)?.error?.message??``}}export{e as t};

@@ -1,0 +1,1 @@
+import{bt as e,gt as t,ht as n,yt as r}from"./use-collection-query-BIIBPoT1.js";var i=t({name:`posTerminals`,fetch:(t,n)=>e.stores.listStorePosTerminalsHandlerApiStoresStoreIdPosTerminalsGet({storeId:t.storeId},r(t,n)).then(e=>e.data),itemId:e=>e.id,pullEvery:n,startup:`always`,tenantScoped:!0,userScoped:!1,storeScoped:!0});export{i as t};
