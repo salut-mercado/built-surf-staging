@@ -1,0 +1,1 @@
+import{mt as e}from"./index-1P50O2s1.js";async function t({storeId:t,hasCurrentDraft:n,startRevision:r,navigate:i}){if(t){if(n)i(e.stores.inventoryRevision(t));else try{await r.mutateAsync({storeId:t}),i(e.stores.inventoryRevision(t))}catch{}}}export{t};
