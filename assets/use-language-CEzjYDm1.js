@@ -1,0 +1,1 @@
+import{Y as e}from"./pos-weighted-vccK7WUi.js";function t(t){let n=t===void 0?`en`:t,{i18n:r}=e();return r.resolvedLanguage??r.language??n}export{t};
